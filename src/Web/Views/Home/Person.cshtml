@@ -1,0 +1,23 @@
+﻿@using Domain
+
+@model Person
+
+@{
+    ViewBag.Title = "BusinessBaseTest";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(_ => _.FirstName)
+    @Html.EditorFor(_ => _.FirstName)
+    @Html.ValidationMessageFor(_ => _.FirstName)
+    <br />
+    <br />
+    @Html.LabelFor(_ => _.LastName)
+    @Html.EditorFor(_ => _.LastName)
+    @Html.ValidationMessageFor(_ => _.LastName)
+    <br />
+    <br />
+    <input type="submit" value="Submit" />
+}
